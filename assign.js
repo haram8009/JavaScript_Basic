@@ -5,8 +5,7 @@ export const makeIntro = (name, mbti) => {
   // 형식은 자유지만 이름과 MBTI가 포함되어야 합니다.
 
   // 여기다 코드를 작성하세요.
-  let introduce = '';
-
+  let introduce = `안녕하세요! 저는 ${name}이고 MBTI는 ${mbti}입니다 ^!^`;
   return introduce;
 };
 
@@ -18,6 +17,14 @@ export const assign2 = (arr, divisor) => {
 
   // 여기에 코드를 작성하세요.
   let answer = [];
-
+  arr.forEach((element) => {
+    if (element % divisor !== 0) {
+      answer.push(element);
+    }
+  });
+  if (answer.length == 0) {
+    answer.push('없어요!');
+  }
+  answer.sort();
   return answer;
 };
